@@ -1,0 +1,66 @@
+h1{
+
+  text-align: center;
+
+  font-family: "Roboto", "sans-serif";
+
+}
+
+
+
+#floating-panel {
+
+  position: absolute;
+
+  top: 90px;
+
+  left: 50%;
+
+  margin-left: -180px;
+
+  width: 350px;
+
+  z-index: 5;
+
+  background-color: #fff;
+
+  padding: 5px;
+
+  border: 1px solid #999;
+
+  text-align: center;
+
+  font-family: "Roboto", "sans-serif";
+
+  line-height: 30px;
+
+  padding-left: 10px;
+
+}
+
+
+
+#distance{
+
+  width: 225px;
+
+}
+
+#map {
+
+  height: 400px;
+
+  width: 100%;
+
+}
+
+#address{
+
+  text-align: center;
+
+  font-family: "Roboto", "sans-serif";
+
+}
+
+
+

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kjs to distance calculator</title>
+    <style>
+        #map {
+
+        height: 400px;
+
+        width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>How far do you need to walk to burn off those kilojoules</h1>
+
+    <form >
+    <label for="weight">Weight (in kgs):</label><br>
+    <input type="number" id="weight" name="weight" ><br>
+    <label for="speed">Walking speed:</label><br>
+    <select name="speed" id="speed">
+        <option value=3 >Gentle pace (5km/h)</option>
+        <option value=3.27 >Medium pace (5.5km/h)</option>
+        <option value=3.33>Brisk pace (6km/h)</option>
+    </select><br>
+    <label for="kjConsumed">Kilojoules consumed:</label><br>
+    <input type="number" id="kjConsumed" name="kjConsumed" ><br>
+    <input id="submit" type="button" value="Let's go!" />
+    </form> 
+
+    <p id="output"></p>
+    <div id="map"></div>
+
+    <p id="address"></p>
+    <script src="script.js"></script>
+</body>
+</html>
