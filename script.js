@@ -6,13 +6,9 @@ const apiKey = 'AIzaSyDaMCjuouGRFDlX5nussd03DzzIr8DU6eM';
 
 const googleMapsUrl = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=geometry&callback=initMap`;
 
- 
-
 // Starting point coordinates
 
 const startingPoint = { lat: -31.94878898970997, lng:  115.85445722330034 }; // HBF co-ordinates
-
- 
 
 // Create a map centered at the starting point
 
@@ -26,13 +22,9 @@ function initMap() {
 
   });
 
- 
-
   // Generate a random angle for the route
 
   const randomAngle = Math.random() * 360;
-
- 
 
   // Calculate the destination point using the starting point and random angle
 
@@ -116,7 +108,7 @@ function initMap() {
 
       let address = `${streetNumber} ${streetName}, ${suburb}`;
 
-      document.getElementById("address").innerHTML = `Final destination: ${address}`;
+      document.getElementById("address").innerHTML = `To burn off ${document.getElementById('kjConsumed').value}kj you need to walk ${(distanceWalked/1000).toFixed(2)}km to ${address}`;
 
     } else {
 
@@ -129,8 +121,6 @@ function initMap() {
   .catch((e) => window.alert("Geocoder failed due to: " + e));
 
 }
-
- 
 
 // Load the Google Maps API script asynchronously
 
@@ -148,27 +138,19 @@ function loadGoogleMapsScript() {
 
 }
 
-
-
 document.getElementById("submit").addEventListener("click", () => {
 
-    weight = document.getElementById('weight').value;
-    speed = document.getElementById('speed').value;
-    jConsumed = (document.getElementById('kjConsumed').value)*1000;
+  let weight = document.getElementById('weight').value;
+  let speed = document.getElementById('speed').value;
+  let jConsumed = (document.getElementById('kjConsumed').value)*1000;
+  distanceWalked = (jConsumed/(weight*speed));
 
-    //Validate form inputs
-    if (weight == "" || weight == null || speed == "" || speed == null || jConsumed == "" || jConsumed == null) {
-        alert("Form must be filled out");
-        return false;
-    }
+  // Validate form inputs
+  if (weight == "" || weight == null || speed == "" || speed == null || jConsumed == "" || jConsumed == null) {
+      alert("Form must be filled out");
+      return false;
+  }
 
-    distanceWalked = (jConsumed/(weight*speed));
-
-    loadGoogleMapsScript();
-
-    const output = document.getElementById('output');
-    output.innerHTML = `To burn off ${document.getElementById('kjConsumed').value}kj you need to walk ${(distanceWalked/1000).toFixed(2)}km`;
-
-    
+  loadGoogleMapsScript();
 
 });
