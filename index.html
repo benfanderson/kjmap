@@ -4,7 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kjs to distance calculator</title>
-    <style>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
         #map {
 
         height: 400px;
@@ -12,12 +13,12 @@
         width: 100%;
 
         }
-    </style>
+    </style> -->
 </head>
 <body>
-    <h1>How far do you need to walk to burn off those kilojoules</h1>
+    <h1 id="headline">How far do you need to walk to burn off those kilojoules</h1>
 
-    <form >
+    <form id="floating-panel" >
     <label for="weight">Weight (in kgs):</label>
     <input type="number" id="weight" name="weight"/><br>
     <label for="speed">Walking speed:</label>
@@ -30,11 +31,9 @@
     <input type="number" id="kjConsumed" name="kjConsumed"/><br>
     <input id="submit" type="button" value="Let's go!" />
     </form> 
-
-    <p id="address"></p>
     <div id="map"></div>
+    <p id="address"></p>
 
-    
     <script src="script.js"></script>
 </body>
 </html>
