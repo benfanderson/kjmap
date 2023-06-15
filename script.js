@@ -154,3 +154,12 @@ document.getElementById("submit").addEventListener("click", () => {
   loadGoogleMapsScript();
 
 });
+
+//Trigger button click when Enter key is pressed
+const input = document.getElementById("kjConsumed");
+input.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("submit").click();
+  }
+});
