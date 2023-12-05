@@ -1,0 +1,75 @@
+#headline {
+
+  text-align: center;
+
+  font-family: "Helvetica", "sans-serif";
+
+}
+
+
+#floating-panel {
+
+  background-color: #fff;
+
+  padding: 5px;
+
+  border: 1px solid #999;
+
+  text-align: center;
+
+  font-family: "Helvetica", "sans-serif";
+
+  line-height: 30px;
+
+  padding-left: 10px;
+
+}
+
+
+#map {
+
+  height: 50vh;
+
+  width: 100%;
+
+}
+
+#address{
+
+  text-align: center;
+
+  font-family: "Helvetica", "sans-serif";
+
+}
+
+@media (min-width: 500px) {
+  #floating-panel {
+
+    position: absolute;
+  
+    top: 120px;
+  
+    left: 30%;
+  
+    z-index: 5;
+
+    width: 35%;
+  }
+
+  #map {
+    height: 80vh;
+  }
+  
+}
+
+@media (min-width: 900px) {
+  #floating-panel {
+    left: 35%;
+    top: 80px;
+    width: 25%;
+  }
+
+  #map {
+    height: 85vh;
+  }
+}
